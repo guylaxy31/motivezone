@@ -2,10 +2,20 @@
   <div class="header-container">
     <div class="header-bg">
       <div class="nav-container">
+        <div class="drawer-btn">
+          <img
+            v-on:click="drawerhandler"
+            src="@/assets/icons/drawer-menu.svg"
+            alt="drawer icon"
+          />
+        </div>
         <div class="motive-logo">
           <img src="@/assets/logo/motive-logo.svg" alt="motive logo" />
         </div>
-        <div class="menu-list">
+        <div
+          v-bind:style="[this.drawerstate === false ? null : 'display:flex']"
+          class="menu-list"
+        >
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Our Work</a></li>
@@ -38,7 +48,20 @@
 </template>
 
 <script>
-export default { name: "Header" };
+export default {
+  name: "Header",
+  data() {
+    return {
+      drawerstate: false,
+    };
+  },
+  computed: {},
+  methods: {
+    drawerhandler() {
+      this.drawerstate = !this.drawerstate;
+    },
+  },
+};
 </script>
 
 <style scpoed>
@@ -70,6 +93,7 @@ export default { name: "Header" };
   flex-wrap: wrap;
   width: 80%;
 }
+
 .menu-list {
   display: flex;
   flex-direction: row;
@@ -97,7 +121,7 @@ export default { name: "Header" };
 
 .say-btn {
   background-color: #ff9c00;
-  border-radius: 5px;
+  border-radius: 4px;
   width: 104px;
   height: 48px;
   display: flex;
@@ -114,13 +138,50 @@ export default { name: "Header" };
 
 .header-content {
   display: flex;
+  width: 100%;
   flex-direction: row;
-  margin-top: 96px;
+  margin-top: 232px;
+  justify-content: flex-start;
   align-items: center;
-  gap: 144px;
 }
-.header-content .content-text {
-  width: 696px;
+.content-text {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 696px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.content-group-img {
+  position: absolute;
+  display: flex;
+  width: 95%;
+
+  justify-content: flex-end;
+}
+
+.content-group-img > img {
+  width: 560px;
+}
+.drawer-btn {
+  position: absolute;
+  width: 100%;
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 16px;
+  margin-right: 32px;
+}
+
+.drawer-btn > img {
+  width: 24px;
+}
+
+.drawer-btn > img:hover {
+  cursor: pointer;
 }
 
 .content-text h1,
@@ -129,12 +190,14 @@ p {
   color: #fff;
 }
 .content-text h1 {
-  font-size: 50px;
+  font-size: 48px;
   margin-bottom: 32px;
+  line-height: 72px;
 }
 .content-text > p {
   font-size: 15px;
   margin-bottom: 40px;
+  line-height: 24px;
 }
 
 .read-btn {
@@ -144,7 +207,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .read-btn:hover {
@@ -155,6 +218,123 @@ p {
   color: #fff;
 }
 
-.content-group-img {
+@media only screen and (max-width: 1200px) {
+  .nav-container {
+    justify-content: flex-end;
+  }
+  .header-content {
+    margin-top: 104px;
+  }
+  .menu-list {
+    width: 70%;
+  }
+  .motive-logo {
+    width: 30%;
+  }
+  .say-btn {
+    margin-top: 16px;
+  }
+
+  .content-text {
+    max-width: 568px;
+  }
+  .content-group-img > img {
+    width: 282px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-container {
+    justify-content: center;
+  }
+  .motive-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .menu-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .content-text {
+    max-width: 472px;
+    z-index: 1;
+  }
+  .content-text > h1 {
+    font-size: 40px;
+    margin-bottom: 24px;
+    line-height: 40px;
+  }
+
+  .content-group-img > img {
+    margin-bottom: -328px;
+  }
+}
+
+@media only screen and (max-width: 662px) {
+  .menu-list {
+    display: none;
+  }
+  .menu-list ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+  .menu-list ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .drawer-btn {
+    display: flex;
+    margin-top: 8px;
+ 
+  }
+  .content-group-img {
+    justify-content: center;
+    margin-bottom: -120px;
+    width: 100%;
+    margin-bottom: -584px;
+  }
+  .content-group-img > img {
+    width: 218px;
+    margin-bottom: 0;
+  }
+
+  .content-text > h1 {
+    font-size: 24px;
+  }
+
+  .content-text > p {
+    font-size: 14px;
+  }
+  .say-btn {
+    margin-top: 0;
+    width: 72px;
+    height: 40px;
+  }
+  .read-btn {
+    width: 88px;
+    height: 40px;
+    align-self: center;
+  }
+  .read-btn > p {
+    font-size: 14px;
+  }
+
+  .motive-logo > img {
+    width: 192px;
+  }
 }
 </style>
+
+ 
