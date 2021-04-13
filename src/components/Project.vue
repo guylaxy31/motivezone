@@ -61,10 +61,12 @@ export default {
 #project {
   width: 100%;
   display: flex;
+  margin-top: 128px;
+  margin-bottom: 120px;
 }
 .pj-bg {
-  min-width: 100%;
   background-image: url("../assets/images/project-bg.svg");
+  min-width: 100%;
   min-height: 1069px;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,7 +74,8 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-bottom: 72px
 }
 
 .pj-title {
@@ -81,7 +84,8 @@ export default {
   padding-left: 10%;
   padding-right: 10%;
   align-items: center;
-  margin-bottom: 96px;
+  margin-top: 96px;
+  margin-bottom: 64px;
 }
 
 .pj-title > h1 {
@@ -133,5 +137,47 @@ export default {
 }
 .learn-btn:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .pj-card {
+    max-width: 360px;
+  }
+
+  .pj-card > img {
+    width: 360px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .pj-title h1 {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pj-card {
+    max-width: 320px;
+  }
+  .pj-card > img {
+    width: 320px;
+  }
+}
+
+@media only screen and (max-width: 662px) {
+  .pj-card {
+    max-width: 240px;
+  }
+  .pj-card > img {
+    width: 240px;
+  }
+  .pj-card > h1 {
+    font-size: 18px;
+  }
+  .pj-card > p {
+    font-size: 14;
+  }
+  .learn-btn > p {
+    font-size: 14px;
+  }
 }
 </style>

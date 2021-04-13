@@ -33,4 +33,16 @@ export default {
   width: 100%;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 1200px) {
+  #interest {
+    margin-bottom: 160px;
+  }
+}
+
+@media only screen and (max-width: 661px) {
+  #interest {
+    margin-bottom: 64px;
+  }
+}
 </style>
