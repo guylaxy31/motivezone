@@ -5,6 +5,8 @@
     <Helpwith />
     <Interest />
     <Project />
+    <Technician />
+    <Company />
   </div>
 </template>
 
@@ -14,7 +16,8 @@ import Services from "@/components/Services.vue";
 import Helpwith from "@/components/Helpwith.vue";
 import Interest from "@/components/Interest.vue";
 import Project from "@/components/Project.vue";
-
+import Company from "@/components/Company.vue";
+import Technician from "@/components/Technician.vue";
 export default {
   name: "Home",
   components: {
@@ -23,6 +26,8 @@ export default {
     Helpwith,
     Interest,
     Project,
+    Company,
+    Technician,
   },
 };
 </script>
