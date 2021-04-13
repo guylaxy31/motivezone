@@ -1,5 +1,5 @@
 <template>
-  <div class="header-container">
+  <div data-aos="fade-down" data-aos-duration="1000" class="header-container">
     <div class="header-bg">
       <div class="nav-container">
         <div class="drawer-btn">

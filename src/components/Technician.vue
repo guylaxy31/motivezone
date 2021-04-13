@@ -1,5 +1,5 @@
 <template>
-  <div id="technician">
+  <div data-aos="fade-up" data-aos-duration="500" id="technician">
     <div class="tech-box">
       <img src="@/assets/images/tech-profile.svg" alt="technician profile" />
       <div class="tech-details">

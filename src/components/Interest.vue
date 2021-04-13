@@ -1,7 +1,9 @@
 <template>
   <div id="interest">
     <div class="interest-content">
-      <h1>Interested To Work With Us?</h1>
+      <h1 data-aos="fade-left" data-aos-duration="1000">
+        Interested To Work With Us?
+      </h1>
       <p class="interest-p1">
         Because it is pleasure, but because those who do not know how to pursue
         pleasure rationally encounter consequences that are extremely painful.

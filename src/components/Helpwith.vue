@@ -2,7 +2,7 @@
   <div id="Helpwith">
     <div class="help-bg">
       <div class="help-content">
-        <h1>We Are Hear To Help You With</h1>
+        <h1 data-aos="fade-right" data-aos-duration="1000">We Are Hear To Help You With</h1>
         <p class="help-p1">
           But I must explain to you how all this mistaken idea of denouncing
           pleasure and praising pain was born and I will give you a complete

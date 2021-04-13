@@ -7,7 +7,7 @@
     <Project />
     <Technician />
     <Company />
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -20,8 +20,14 @@ import Project from "@/components/Project.vue";
 import Company from "@/components/Company.vue";
 import Technician from "@/components/Technician.vue";
 import Footer from "@/components/Footer.vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default {
   name: "Home",
+  created() {
+    AOS.init();
+  },
   components: {
     Header,
     Services,

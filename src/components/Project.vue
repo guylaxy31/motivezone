@@ -2,7 +2,7 @@
   <div id="project">
     <div class="pj-bg">
       <div class="pj-title">
-        <h1>Our Latest Project</h1>
+        <h1 data-aos="fade-right" data-aos-duration="1000">Our Latest Project</h1>
         <p>
           To take a trivial example, which of us ever undertakes laborious
           physical exercise, except to obtain some advantage But who has any
@@ -10,7 +10,7 @@
         </p>
       </div>
       <div class="pj-card-list">
-        <div class="pj-card">
+        <div data-aos="fade-up" data-aos-duration="1000" class="pj-card">
           <img src="@/assets/images/project01.svg" alt="project image1" />
           <h1>Business & corporate</h1>
           <p>
@@ -22,7 +22,7 @@
             <img src="@/assets/icons/arr-right-orange.svg" alt="arrow right" />
           </div>
         </div>
-        <div class="pj-card">
+        <div data-aos="fade-up" data-aos-duration="1500" class="pj-card">
           <img src="@/assets/images/project02.svg" alt="project image1" />
           <h1>Food & restaurant</h1>
           <p>
@@ -34,7 +34,7 @@
             <img src="@/assets/icons/arr-right-orange.svg" alt="arrow right" />
           </div>
         </div>
-        <div class="pj-card">
+        <div data-aos="fade-up" data-aos-duration="2000" class="pj-card">
           <img src="@/assets/images/project03.svg" alt="project image1" />
           <h1>Travel & tourism</h1>
           <p>
@@ -75,7 +75,7 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  padding-bottom: 72px
+  padding-bottom: 72px;
 }
 
 .pj-title {

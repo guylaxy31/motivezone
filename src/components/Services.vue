@@ -1,5 +1,5 @@
 <template>
-  <div id="services">
+  <div data-aos="fade-up" data-aos-easing="ease-out" id="services">
     <div class="service-title">
       <h1>Our Services</h1>
       <p>
