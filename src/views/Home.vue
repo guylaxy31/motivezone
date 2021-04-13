@@ -7,6 +7,7 @@
     <Project />
     <Technician />
     <Company />
+    <Footer/>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Interest from "@/components/Interest.vue";
 import Project from "@/components/Project.vue";
 import Company from "@/components/Company.vue";
 import Technician from "@/components/Technician.vue";
+import Footer from "@/components/Footer.vue";
 export default {
   name: "Home",
   components: {
@@ -28,6 +30,7 @@ export default {
     Project,
     Company,
     Technician,
+    Footer,
   },
 };
 </script>

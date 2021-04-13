@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #company {
   display: flex;
   flex-wrap: wrap;
