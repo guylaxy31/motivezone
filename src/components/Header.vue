@@ -297,7 +297,6 @@ p {
   .drawer-btn {
     display: flex;
     margin-top: 8px;
- 
   }
   .content-group-img {
     justify-content: center;
@@ -321,6 +320,9 @@ p {
     margin-top: 0;
     width: 72px;
     height: 40px;
+  }
+  .say-btn > p {
+    font-size: 14px;
   }
   .read-btn {
     width: 88px;
